@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Header from '../components/Header/Header.astro'
+import Footer from '../components/Footer/Footer.astro'
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Header />
+		<div class="text-center py-8 px-8 gap-4 flex flex-col">
+			<span class="text-[48px] font-bold">Hi There! <br>Ardy's Here</span>
+			<p class="text-[20px] font-medium">Passionate for Interactive, Impactful, and Great Website.</p>
+		</div>
+		<div class="bg-blue-primary h-screen flex flex-col justify-center gap-4 items-center text-center text-white">
+			<span class="text-[20px] font-bold">Work.</span>
+			<span class="font-bold text-2xl">Let’s Collaborate<br> For Something Great.</span>
+			<div class="scroll-smooth overflow-x-auto snap-x relative w-full flex gap-4 px-6 pb-6">
+				<Card />
+				<Card />
+				<Card />
+			</div>
+		</div>
+		<Footer />
+	</main>
+</Layout>
