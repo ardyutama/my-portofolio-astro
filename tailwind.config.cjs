@@ -20,13 +20,18 @@ module.exports = {
 				sans: ['Inter var', ...defaultTheme.fontFamily.sans],
 			},
 			keyframes: {
-				slideshow: {
+				slideshowMobile: {
 					'0%': {transform: 'translateX(400px)' },
 					'100%': {transform: 'translateX(calc(-250px * 2))'}
+				},
+				slideshowDesktop: {
+					'0%': {transform: 'translateX(calc(400px * 2))' },
+					'100%': {transform: 'translateX(calc(-250px * 4))'}
 				}
 			},
 			animation: {
-				'slideshow-icon': 'slideshow 10s infinite linear'
+				'slideshow-icon-mobile': 'slideshowMobile 10s infinite linear',
+				'slideshow-icon-desktop': 'slideshowDesktop 15s infinite linear'
 			}
 
 		},
