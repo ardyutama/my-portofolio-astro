@@ -1,7 +1,16 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  }
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "react",
+		"types": ["bun-types"],
+		"baseUrl": ".",
+		"paths": {
+			"@icons/*": ["src/assets/icons/*"],
+			"@features/*": ["src/features/*"],
+			"@ui/*": ["src/features/ui/*"],
+			"@content/*": ["src/assets/contents/*"],
+			"@images/*": ["src/assets/images/*"]
+		}
+	}
 }

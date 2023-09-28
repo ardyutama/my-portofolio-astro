@@ -1,0 +1,74 @@
+---
+import PageLayout from '@features/ui/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
+import personImage from '@icons/person-image.svg';
+import github from '@icons/github_blue.svg';
+import linkedin from '@icons/linkedin_blue.svg';
+import download from '@icons/download_white.svg';
+import {experiences} from "@content/content"
+---
+
+<PageLayout>
+  <div class="flex flex-col items-center gap-6 py-16">
+    <Image src={personImage} alt="person" />
+    <div class="flex flex-col items-center gap-4 text-center text-black">
+      <span class="text-[48px] font-bold">I'm Ardy.</span>
+      <p class="text-[32px] font-medium">
+        I’m a Developer that passionate in Software Development based in Surabaya, Indonesia.
+      </p>
+    </div>
+    <div class="flex gap-3">
+      <Image src={github} alt="github" width="48" />
+      <Image src={linkedin} alt="linkedin" width="48" />
+    </div>
+    <button class="inline rounded-3xl bg-blue-primary p-4">
+      <div class="inline-flex gap-4 font-bold text-white">
+        Download CV
+        <span>
+          <Image src={download} alt="download" width="24" height="24" />
+        </span>
+      </div>
+    </button>
+  </div>
+  <div class="relative flex min-h-screen flex-col bg-blue-primary">
+    <div class="relative -top-6 mx-6 inline-block rounded-2xl bg-white p-4 shadow-card">
+      <div class="inline-flex w-full items-center justify-center gap-6 self-center">
+        <span class="text-2xl font-bold">Tech Stacks</span>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 px-6">
+      <span class="text-[32px] font-bold text-white pb-4">Experiences</span>
+      {
+        experiences.map((experience, index) => (
+          <ol class="border-l-2 border-yellow-primary">
+            <li>
+              <div class="flex-start flex items-start">
+                <div class="-ml-[7px] -mt-2 mr-3 flex h-[12px] w-[12px] flex-none items-start justify-center rounded-full bg-yellow-primary" />
+                <div class="flex flex-col items-start gap-2 self-stretch pb-6">
+                  <div class="gap-0">
+                    <p class="-mt-2 text-[12px] text-white md:text-[20px]">
+                      {experience.startDate} - {experience.endDate}
+                    </p>
+                    <p class="text-[16px] font-bold text-white md:text-[32px]">
+                      {experience.position}
+                    </p>
+                    <p class="text-[16px text-white md:text-[32px] md:font-normal">
+                      {experience.company}
+                    </p>
+                  </div>
+                  <div class="flex-start flex flex-wrap gap-1">
+                    {experience.skills.map((skill) => (
+                      <p class="rounded-[16px] border-[1px] border-white px-2 py-1 text-[12px] text-white md:text-[16px]">
+                        {skill}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        ))
+      }
+    </div>
+  </div>
+</PageLayout>
