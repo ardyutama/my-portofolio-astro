@@ -5,7 +5,8 @@ import personImage from '@icons/person-image.svg';
 import github from '@icons/github_blue.svg';
 import linkedin from '@icons/linkedin_blue.svg';
 import download from '@icons/download_white.svg';
-import {experiences} from "@content/content"
+import {experiences,techStacks} from "@content/content"
+
 ---
 
 <PageLayout>
@@ -30,10 +31,17 @@ import {experiences} from "@content/content"
       </div>
     </button>
   </div>
-  <div class="relative flex min-h-screen flex-col bg-blue-primary">
-    <div class="relative -top-6 mx-6 inline-block rounded-2xl bg-white p-4 shadow-card">
+  <div class="relative flex min-h-screen flex-col bg-blue-primary pb-10">
+    <div class="relative -top-6 mx-6 rounded-2xl bg-white shadow-card flex-col gap-4 py-6 inline-block overflow-clip">
       <div class="inline-flex w-full items-center justify-center gap-6 self-center">
         <span class="text-2xl font-bold">Tech Stacks</span>
+      </div>
+      <div class="w-full flex flex-none justify-center animate-slideshow-icon gap-6">
+          {techStacks.map((techStack)=> 
+           <div class="rounded-full flex h-[64px] w-[64px] shadow-md flex-none justify-center m-2">
+            <Image src={techStack.icon} alt={techStack.name} width="32"/>
+          </div>
+            )}
       </div>
     </div>
     <div class="flex flex-col gap-2 px-6">

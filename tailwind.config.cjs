@@ -19,6 +19,16 @@ module.exports = {
 			fontFamily: {
 				sans: ['Inter var', ...defaultTheme.fontFamily.sans],
 			},
+			keyframes: {
+				slideshow: {
+					'0%': {transform: 'translateX(400px)' },
+					'100%': {transform: 'translateX(calc(-250px * 2))'}
+				}
+			},
+			animation: {
+				'slideshow-icon': 'slideshow 10s infinite linear'
+			}
+
 		},
 	},
 	plugins: [],
