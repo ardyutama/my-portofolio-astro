@@ -1,0 +1,42 @@
+---
+import { experiences} from '@content/content';
+---
+
+<div
+    class="relative flex h-full flex-col bg-blue-primary pb-10 py-32 md:h-full justify-center md:px-12"
+  >
+    <div class="flex flex-col justify-center gap-2 px-6">
+      <span class="pb-4 text-[32px] font-bold text-white md:text-[48px]">Experiences</span>
+      {
+        experiences.map((experience, index) => (
+          <ol class="border-l-2 border-yellow-primary">
+            <li>
+              <div class="flex-start flex items-start">
+                <div class="-ml-[7px] -mt-2 mr-3 flex h-[12px] w-[12px] flex-none items-start justify-center rounded-full bg-yellow-primary" />
+                <div class="flex flex-col items-start gap-2 self-stretch pb-6">
+                  <div class="gap-0">
+                    <p class="-mt-2 text-[12px] text-white md:text-[20px]">
+                      {experience.startDate} - {experience.endDate}
+                    </p>
+                    <p class="text-[16px] font-bold text-white md:text-[32px]">
+                      {experience.position}
+                    </p>
+                    <p class="text-[16px text-white md:text-[32px] md:font-normal">
+                      {experience.company}
+                    </p>
+                  </div>
+                  <div class="flex-start flex flex-wrap gap-1">
+                    {experience.skills.map((skill) => (
+                      <p class="rounded-[16px] border-[1px] border-white px-2 py-1 text-[12px] text-white md:text-[16px]">
+                        {skill}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        ))
+      }
+    </div>
+  </div>

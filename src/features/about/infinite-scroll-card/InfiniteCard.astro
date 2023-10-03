@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import { techStacks } from '@content/content';
+---
+
+<div class="w-full flex justify-center px-6">
+    <div
+      class="relative -bottom-24 z-10 flex flex-col w-full gap-4 overflow-clip rounded-2xl bg-white py-6 shadow-card md:max-w-2xl"
+    >
+      <div class="inline-flex w-full items-center justify-center gap-6 self-center">
+        <span class="text-2xl font-bold">Tech Stacks</span>
+      </div>
+      <div
+        class="flex w-full animate-slideshow-icon-mobile justify-center gap-6 md:animate-slideshow-icon-desktop"
+      >
+        {
+          techStacks.map((techStack) => (
+            <div class="m-2 flex h-[64px] w-[64px] flex-none justify-center rounded-full shadow-md">
+              <Image src={techStack.icon} alt={techStack.name} width="32" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
