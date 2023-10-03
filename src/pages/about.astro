@@ -9,27 +9,32 @@ import { experiences, techStacks } from '@content/content';
 ---
 
 <PageLayout>
-  <div class="flex flex-col items-center gap-6 pt-16 md:px-12 lg:flex-row-reverse">
+  <div class="flex flex-col items-center gap-6 pt-16 lg:flex-row-reverse lg:justify-center">
     <Image src={personImage} alt="person" width="300" height="300" quality={100} />
     <div class="flex flex-col items-center gap-4 text-center text-black">
       <span class="text-[48px] font-bold">I'm Ardy.</span>
-      <p class="text-[32px] font-medium">
+      <p class="text-[32px] font-medium lg:max-w-xl" >
         I’m a Developer that passionate in Software Development based in Surabaya, Indonesia.
       </p>
     </div>
   </div>
   <div class="inline-flex flex-col items-center w-full py-6 gap-4 mb-10">
     <div class="flex gap-3">
+      <a href="https://github.com/ardyutama" target="_blank">
       <Image src={github} alt="github" width="48" />
-      <Image src={linkedin} alt="linkedin" width="48" />
+      </a>
+      <a href="https://www.linkedin.com/in/ardy-putra-utama/"  target="_blank">
+        <Image src={linkedin} alt="linkedin" width="48" />
+
+      </a>
     </div>
     <button class="inline rounded-3xl bg-blue-primary p-4">
-      <div class="inline-flex gap-4 font-bold text-white">
+      <a class="inline-flex gap-4 font-bold text-white" href="https://drive.google.com/file/d/15J012HE4bYpBR6cd2SCr6DK0HvkTtXGK/view?usp=sharing" target="_blank">
         Download CV
         <span>
           <Image src={download} alt="download" width="24" height="24" />
         </span>
-      </div>
+      </a>
     </button>
   </div>
   <div class="relative flex min-h-screen flex-col bg-blue-primary pb-10 md:px-12">
