@@ -1,12 +1,12 @@
 ---
-import PageLayout from '@features/ui/layouts/PageLayout.astro';
+import Layout from '@ui/layouts/Layout.astro';
 import Greeting from '@features/about/greeting-section/Greeting.astro';
 import InfiniteCard from '@features/about/infinite-scroll-card/InfiniteCard.astro'
 import Experiences from '@features/about/experiences/Experiences.astro'
 ---
 
-<PageLayout>
+<Layout title='About Me | Ardy Putra Utama'>
   <Greeting />
   <InfiniteCard />
   <Experiences />
-</PageLayout>
+</Layout>

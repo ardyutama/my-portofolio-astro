@@ -1,0 +1,14 @@
+---
+import { projects } from '@content/content';
+import Card from '../cards/Card.astro';
+---
+
+<div
+  class="relative flex w-full snap-x gap-4 overflow-x-auto scroll-smooth pb-6 md:justify-center"
+>
+  <div
+  class="relative flex w-full snap-x gap-4 overflow-x-auto scroll-smooth px-6 pb-6 md:justify-center"
+  >
+  {projects.map((project) => <Card data={project} />)}
+  </div>
+</div>

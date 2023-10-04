@@ -1,11 +1,9 @@
 ---
-import Card from '@ui/Card/Card.astro';
-import PageLayout from '@ui/layouts/PageLayout.astro';
-import { projects } from '@content/content';
-import { slide } from 'astro:transitions';
+import Layout from '@ui/layouts/Layout.astro';
+import ProjectsCards from '@features/work/projects-cards/Projects.astro';
 ---
 
-<PageLayout>
+<Layout title="Projects | Ardy Putra Utama">
   <div class="flex flex-col gap-4 px-8 py-8 text-center text-black">
     <span class="text-[48px] font-bold">Hi There! <br />Ardy's Here</span>
     <p class="text-[20px] font-medium">Passionate for Interactive, Impactful, and Great Website.</p>
@@ -15,10 +13,6 @@ import { slide } from 'astro:transitions';
   >
     <span class="text-[20px] font-bold">Work.</span>
     <span class="text-2xl font-bold">Let’s Collaborate<br /> For Something Great.</span>
-    <div class="relative flex w-full snap-x gap-4 overflow-x-auto scroll-smooth px-6 pb-6 md:justify-center">
-      {projects.map((project)=> 
-        <Card data={project} />
-      )}
-    </div>
+    <ProjectsCards />
   </div>
-</PageLayout>
+</Layout>

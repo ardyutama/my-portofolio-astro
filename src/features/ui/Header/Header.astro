@@ -1,7 +1,7 @@
 ---
 const paths = [
   {
-    name: "Home",
+    name: "Projects",
     path: "/",
   },
   {
@@ -18,9 +18,8 @@ const paths = [
             {paths.map((path) => (
                 <a
                   href={path.path}
-                  class={`${Astro.url.pathname == path.path ? "font-bold" : "font-normal"}
+                  class={`${Astro.url.pathname == path.path ? "font-bold" : "font-normal"}`}
                         text-black
-                    `}
                 >
                   {path.name}
                 </a>
