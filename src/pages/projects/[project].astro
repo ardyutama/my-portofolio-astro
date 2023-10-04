@@ -11,9 +11,10 @@ export function getStaticPaths() {
 }
 const { project } = Astro.params;
 const data = projects.find((item) => item.name.replace(/\s+/g, '-').toLowerCase() == project);
+const title = `${data.name} | Ardy Putra Utama`
 ---
 
-<Layout title=`${project} | Ardy Putra Utama`>
+<Layout title={title}>
   <div
     class="relative aspect-[3/2] h-[200px] w-full overflow-hidden bg-yellow-primary md:h-[400px]"
     transition:name=`project ${project}`
