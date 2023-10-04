@@ -8,8 +8,9 @@ const pageName = data.name.replace(/\s+/g, '-').toLowerCase();
 <a
   class="group flex snap-center list-none flex-col gap-2 rounded-2xl bg-white p-6 text-start text-blue-primary shadow-card"
   href={`/projects/${pageName}`}
+  transition:name=`project ${pageName}`
 >
-  <div class="relative aspect-[3/2] h-[200px] w-full overflow-hidden rounded-2xl bg-yellow-primary" transition:name=`project ${pageName}`>
+  <div class="relative aspect-[3/2] h-[200px] w-full overflow-hidden rounded-2xl bg-yellow-primary" >
     <div class="relative left-8 top-12 transition-all group-hover:-translate-y-4">
       <Image src={data.photo} alt={data.name} class="shadow-card" />
     </div>
